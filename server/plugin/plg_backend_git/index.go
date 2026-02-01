@@ -412,7 +412,7 @@ func (g *GitLib) auth() (transport.AuthMethod, error) {
 		}, nil
 	}
 	isPrivateKey := func(pass string) bool {
-		if len(pass) > 1000 && strings.HasPrefix(pass, "-----") {
+		if len(pass) > 400 && strings.HasPrefix(pass, "-----") {
 			return true
 		}
 		return false
